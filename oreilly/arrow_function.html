@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      const getName = (firstName, lastName) => {
+        if (!firstName) {
+          throw new Error("A first name is required!");
+        }
+        if (!lastName) {
+          throw new Error("A second name is required!");
+        }
+        return `Hello, ${lastName} ${firstName}. Welcome!`;
+      };
+
+      console.log(getName("Yonghyun", "Kim"));
+      console.log(getName("Hyun", "Park"));
+
+      //*********************************************************************//
+      const tahoe = {
+        mountains: ["Freel", "Rose", "Tallac", "Rubicon", "Silver"],
+        print: function (delay = 1000) {
+          setTimeout(() => {
+            console.log(this.mountains.join(", "));
+            //.join => The method creates and returns a new string by concatenating all of the elements in an array
+            // separated by commas or a specified separator string
+          }, delay);
+        },
+      };
+
+      tahoe.print();
+    </script>
+  </body>
+</html>

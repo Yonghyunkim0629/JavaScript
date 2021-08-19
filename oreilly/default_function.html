@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      const defaultPerson = {
+        name: {
+          first: "Shane",
+          last: "McConkey",
+        },
+        favActivity: "skiing",
+      };
+
+      function logActivity(person = defaultPerson) {
+        console.log(`${person.name.first} loves ${person.favActivity}`);
+      }
+
+      function greeting(name = "Yong", age = 26, activity = "soccer") {
+        console.log(
+          `Hello, my name is ${name}, I am ${age}years old and my favourite activity is ${activity}!`
+        );
+      }
+
+      logActivity();
+      greeting();
+    </script>
+  </body>
+</html>
