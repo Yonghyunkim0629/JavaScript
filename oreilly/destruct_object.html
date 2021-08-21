@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      const sandwich = {
+        bread: "dutch crunch",
+        meat: "tuna",
+        cheese: "swiss",
+        toppings: ["lettuce", "tomato", "mustard"],
+      };
+
+      //   const { bread, meat } = sandwich;
+      //   console.log(bread, meat);
+
+      let { bread, meat } = sandwich;
+      bread = "garlic";
+      meat = "beaf";
+      console.log(bread, meat);
+      console.log(sandwich.bread, sandwich.meat);
+
+      const lordify = (regularPerson) => {
+        console.log(`${regularPerson.firstName} of book!`);
+      };
+
+      const regularPerson = {
+        firstName: "Yonghyun",
+        lastName: "Kim",
+        brother: {
+          firstName: "Yongeun",
+          lastName: "Kim",
+        },
+      };
+
+      lordify(regularPerson); //Yonghyun of book!
+
+      //////////////////////////////////////////////////////////
+      const lordify1 = ({ lastName }) => {
+        console.log(`${lastName} of book!`);
+      };
+
+      lordify1(regularPerson); //Kim of book!
+
+      //////////////////////////////////////////////////////////
+      const lordify2 = ({ brother: { firstName } }) => {
+        console.log(
+          `${regularPerson.firstName}'s brother name is ${firstName}`
+        );
+      };
+
+      lordify2(regularPerson); //Yonghyun's brother name is Yongeun
+
+      const getName = (regularPerson) => {
+        console.log(
+          `${regularPerson.firstName}'s brother name is ${regularPerson.brother.firstName}`
+        );
+      };
+
+      getName(regularPerson); //Yonghyun's brother name is Yongeun
+    </script>
+  </body>
+</html>
