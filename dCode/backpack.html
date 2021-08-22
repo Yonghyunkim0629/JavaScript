@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      const backpack = {
+        name: "Yong's backpack",
+        volume: 30,
+        color: "gray",
+        pocketNum: 15,
+        strapLength: {
+          left: 26,
+          right: 26,
+        },
+        lidOpen: false,
+        carryOn: false,
+        toggleLid: function (lidStatus) {
+          this.lidOpen = lidStatus;
+        },
+        newStrapLength: function (lengthOfLeft, lengthOfRight) {
+          this.strapLength.left = lengthOfLeft;
+          this.strapLength.right = lengthOfRight;
+        },
+        carry: function (carryStatus) {
+          this.carryOn = carryStatus;
+        },
+      };
+
+      //backpack.toggleLid("open");
+      console.log(backpack);
+    </script>
+  </body>
+</html>
