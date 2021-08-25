@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      const user = {
+        name: "Yong",
+        age: 25,
+        scores: [80, 90],
+      };
+      user.height = 175;
+      user.scores.push(70);
+
+      const copied = { ...user, age: 60, occupation: "Web Developer" };
+      // same to
+
+      //cloning an object
+      //   const copied2 = Object.assign({}, user, {
+      //     age: 60,
+      //     occupation: "Web Developer",
+      //   });
+
+      console.log(copied);
+      //console.log(copied2);
+
+      const { name, age, ...others } = copied;
+
+      console.log(name);
+      console.log(age);
+      console.log(others);
+    </script>
+  </body>
+</html>
